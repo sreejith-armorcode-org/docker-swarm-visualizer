@@ -1,4 +1,13 @@
 name: Docker Image CI
+env:
+  armorcodehost: https://app.armorcode.com
+  product: Docker Swarm
+  subProduct: Visualizer
+  environment: Production
+  token: ${{secrets.ARMORCODE_TOKEN}}
+  buildTool: GITHUB_ACTIONS
+  buildNumber: ${{github.run_number}}
+  end: 30
 
 on:
   push:
@@ -7,6 +16,10 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - name: ArmorCode Validation
+        run: |
+          wget https://app.armorcode.com/static/scripts/slastatus.sh
+          sh slastatus.sh
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
