@@ -10,7 +10,7 @@ env:
   end: 30
   SHA: ${{ github.event.pull_request.head.sha || github.event.after }}
   REGISTRY: docker.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: sreejitharmorcode/docker-swarm-visualizer
 
 on:
   push:
