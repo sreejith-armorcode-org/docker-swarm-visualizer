@@ -68,4 +68,10 @@ jobs:
           image: ${{ steps.meta.outputs.tags }}
           sarif-file: sarif.output.json
           summary: true
+
+      - name: Make the Armorcode upload script executable
+        run: chmod +x ./armorcode_import_docker_scout.sh
+
+      - name: Run the Bash script
+        run: ./armorcode_import_docker_scout.sh ${{ secrets.ARMORCODE_REPORT_TOKEN }} sarif.output.json
   
