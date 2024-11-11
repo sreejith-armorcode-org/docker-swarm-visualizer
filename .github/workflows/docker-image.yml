@@ -70,8 +70,8 @@ jobs:
           summary: true
 
       - name: Make the Armorcode upload script executable
-        run: chmod +x ./armorcode_import_docker_scout.sh
+        run: chmod +x armorcode_import_docker_scout.sh
 
       - name: Run the Bash script
-        run: ./armorcode_import_docker_scout.sh ${{ secrets.ARMORCODE_REPORT_TOKEN }} sarif.output.json
+        run: armorcode_import_docker_scout.sh ${{ secrets.ARMORCODE_REPORT_TOKEN }} sarif.output.json
   
