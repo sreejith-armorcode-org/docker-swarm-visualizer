@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swarm-visualizer
+  labels:
+    app: swarm-visualizer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: swarm-visualizer
+  template:
+    metadata:
+      labels:
+        app: swarm-visualizer
+    spec:
+      containers:
+        - name: swarm-visualizer
+          image: sreejitharmorcode/docker-swarm-visualizer:latest
+          ports:
+            - containerPort: 9500 # Port exposed by the visualizer
+          env:
+            - name: VISUALIZER_TASK
+              value: "true" # Enable task visualization if needed
