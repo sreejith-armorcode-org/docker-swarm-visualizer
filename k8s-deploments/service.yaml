@@ -6,6 +6,6 @@ spec:
   type: LoadBalancer # Use LoadBalancer to expose the service externally
   ports:
     - port: 80        # Port to access the service externally
-      targetPort: 9500 # Port on which the visualizer is running inside the pod
+      targetPort: 8080 # Port on which the visualizer is running inside the pod
   selector:
     app: swarm-visualizer # Matches the deployment's labels
