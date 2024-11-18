@@ -18,7 +18,7 @@ spec:
         - name: swarm-visualizer
           image: sreejitharmorcode/docker-swarm-visualizer:latest
           ports:
-            - containerPort: 9500 # Port exposed by the visualizer
+            - containerPort: 8080 # Port exposed by the visualizer
           env:
             - name: VISUALIZER_TASK
               value: "true" # Enable task visualization if needed
