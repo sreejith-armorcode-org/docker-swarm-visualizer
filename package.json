@@ -24,7 +24,7 @@
     "babel-loader": "^5.4.2",
     "chai": "^3.2.0",
     "copyfiles": "^0.2.1",
-    "css-loader": "^0.16.0",
+    "css-loader": "^7.1.2",
     "eslint": "^7.28.0",
     "eslint-plugin-react": "^3.3.0",
     "file-loader": "^0.8.4",
