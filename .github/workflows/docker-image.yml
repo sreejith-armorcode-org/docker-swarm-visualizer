@@ -78,5 +78,5 @@ jobs:
           summary: true
 
       - name: Run the Bash script
-        run: armorcode_import_docker_scout.sh ${{ secrets.ARMORCODE_REPORT_TOKEN }} sarif.output.json
+        run: .github/workflows/armorcode_import_docker_scout.sh ${{ secrets.ARMORCODE_REPORT_TOKEN }} sarif.output.json
   
