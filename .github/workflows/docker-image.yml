@@ -24,7 +24,7 @@ jobs:
      #     wget https://app.armorcode.com/static/scripts/slastatus.sh
      #     sh slastatus.sh
       - name: Make the Armorcode upload script executable
-        run: chmod +x ./.github/workflows/armorcode_import_docker_scout.sh
+        run: chmod +x .github/workflows/armorcode_import_docker_scout.sh
       
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
